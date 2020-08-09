@@ -1,0 +1,261 @@
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+    return Scaffold(
+        resizeToAvoidBottomPadding: false,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 10,
+          leading: Icon(
+            Icons.arrow_back,
+            color: Theme.of(context).primaryColor,
+            size: 26,
+          ),
+          title: Text(
+            'Meetup',
+            style: TextStyle(color: Colors.pink),
+          ),
+          actions: [
+            Icon(Icons.search, color: Theme.of(context).primaryColor, size: 26),
+            SizedBox(
+              width: 5,
+            )
+          ],
+        ),
+        body: SingleChildScrollView(
+            child: Stack(overflow: Overflow.visible,
+                // fit: StackFit.expand,
+                children: [
+              Container(
+                  width: double.infinity,
+                  height: 800,
+                  color: Colors.pink[300],
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 700,
+                      ),
+                      Text(
+                        'Today 9:00 PM',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.pink[800]),
+                      ),
+                      Text(
+                        'Easy and Gentle Yoga',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  )),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.pink[200],
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(110))),
+                width: double.infinity,
+                height: 600,
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 450,
+                      ),
+                      Text(
+                        'Today 8:00 PM',
+                        style: TextStyle(color: Colors.pink, fontSize: 22),
+                      ),
+                      FittedBox(
+                        child: Text(
+                          'Practice French, English and Chinese',
+                          style: TextStyle(
+                              fontSize: 21,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.check,
+                              color: Colors.pink[800],
+                            ),
+                            SizedBox(
+                              width: 25,
+                            ),
+                            Icon(
+                              Icons.clear,
+                              color: Colors.pink[800],
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.pink[100],
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(110))),
+                width: double.infinity,
+                height: 400,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 250,
+                    ),
+                    Text('Today 6:00 PM',
+                        style: TextStyle(color: Colors.pink, fontSize: 22)),
+                    FittedBox(
+                      child: Text(
+                        'Yoga and Meditation for Beginners',
+                        style: TextStyle(
+                            fontSize: 21,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.pink),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            CircleAvatar(
+                              backgroundColor: Colors.red,
+                              radius: 18,
+                              child: ClipOval(child: Text('R')),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                left: 20,
+                              ),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.yellow,
+                                radius: 18,
+                                child: ClipOval(child: Text('P')),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                left: 40,
+                              ),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.pink,
+                                radius: 18,
+                                child: ClipOval(child: Text('S')),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                left: 60,
+                              ),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.tealAccent,
+                                radius: 18,
+                                child: ClipOval(child: Text('M')),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                left: 80,
+                              ),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.purple,
+                                radius: 18,
+                                child: ClipOval(child: Text('Z')),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          'Marie and 4 others',
+                          style: TextStyle(
+                            color: Colors.pinkAccent,
+                            fontSize: 18,
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 160,
+                decoration: BoxDecoration(
+                    color: Colors.pink[50],
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(110),
+                    )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Icon(
+                          Icons.music_note,
+                          size: 40,
+                          color: Colors.pink,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(
+                            color: Colors.pink[800],
+                            width: 1,
+                          )),
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Icon(
+                          Icons.trending_up,
+                          size: 40,
+                          color: Colors.pink,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(
+                            color: Colors.pink[800],
+                            width: 1,
+                          )),
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Icon(
+                          Icons.favorite_border,
+                          size: 40,
+                          color: Colors.pink,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(
+                            color: Colors.pink[800],
+                            width: 1,
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+            ])));
+  }
+}
